@@ -52,12 +52,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
-        text: '信息',
+        text: '文档',
         link: '/info/',
-        items: [
-          { text: '基础', link: '/pages/a84b72/' },
-          { text: '杂项', link: '/pages/5f7b46/' },
-        ],
+        // items: [
+        //   { text: 'test', link: '/pages/a84b72/' },
+        //   { text: 'test', link: '/pages/b24b24/' },
+        // ],
       },
       { text: '关于', link: '/about/' },
       {
