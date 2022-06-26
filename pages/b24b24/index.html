@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ansible - 基础 | CS</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/CS/img/favicon.ico">
+    <meta name="description" content="CS">
+    <meta name="keywords" content="cs">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/CS/assets/css/0.styles.28a7cd8e.css" as="style"><link rel="preload" href="/CS/assets/js/app.c7927c47.js" as="script"><link rel="preload" href="/CS/assets/js/2.3fc7a956.js" as="script"><link rel="preload" href="/CS/assets/js/11.bda75eb1.js" as="script"><link rel="prefetch" href="/CS/assets/js/10.49a3937a.js"><link rel="prefetch" href="/CS/assets/js/12.5b27ace7.js"><link rel="prefetch" href="/CS/assets/js/13.3764c0d4.js"><link rel="prefetch" href="/CS/assets/js/14.fc81e316.js"><link rel="prefetch" href="/CS/assets/js/15.98b53a91.js"><link rel="prefetch" href="/CS/assets/js/16.ae096fcf.js"><link rel="prefetch" href="/CS/assets/js/17.a9331c7d.js"><link rel="prefetch" href="/CS/assets/js/18.9c84ef8c.js"><link rel="prefetch" href="/CS/assets/js/19.3df5a103.js"><link rel="prefetch" href="/CS/assets/js/20.90105818.js"><link rel="prefetch" href="/CS/assets/js/3.f47668e6.js"><link rel="prefetch" href="/CS/assets/js/4.cf5cabd3.js"><link rel="prefetch" href="/CS/assets/js/5.98489470.js"><link rel="prefetch" href="/CS/assets/js/6.0cedbacd.js"><link rel="prefetch" href="/CS/assets/js/7.72f74346.js"><link rel="prefetch" href="/CS/assets/js/8.72e57d47.js"><link rel="prefetch" href="/CS/assets/js/9.fdc51972.js">
+    <link rel="stylesheet" href="/CS/assets/css/0.styles.28a7cd8e.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CS/" class="home-link router-link-active"><img src="/CS/img/logo.png" alt="CS" class="logo"> <span class="site-name can-hide">CS</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CS/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="云计算" class="dropdown-title"><a href="/CS/computing/" class="link-title">云计算</a> <span class="title" style="display:none;">云计算</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>test</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/CS/pages/13e13c/" class="nav-link">test</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><a href="/CS/data/" class="link-title">大数据</a> <span class="title" style="display:none;">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>test</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/CS/pages/521462/" class="nav-link">test</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/CS/info/" class="nav-link">文档</a></div><div class="nav-item"><a href="/CS/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/CS/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/CS/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/CS/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/CS/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/ResetDay/cs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/CS/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="云计算" class="dropdown-title"><a href="/CS/computing/" class="link-title">云计算</a> <span class="title" style="display:none;">云计算</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>test</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/CS/pages/13e13c/" class="nav-link">test</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><a href="/CS/data/" class="link-title">大数据</a> <span class="title" style="display:none;">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>test</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/CS/pages/521462/" class="nav-link">test</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/CS/info/" class="nav-link">文档</a></div><div class="nav-item"><a href="/CS/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/CS/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/CS/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/CS/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/CS/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/ResetDay/cs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>阅读</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Ansible</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/CS/pages/b24b24/" aria-current="page" class="active sidebar-link">Ansible - 基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/CS/pages/b24b24/#ansible文档" class="sidebar-link">Ansible文档</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/CS/pages/b24b24/#一、前置条件" class="sidebar-link">一、前置条件</a></li><li class="sidebar-sub-header level3"><a href="/CS/pages/b24b24/#二、安装" class="sidebar-link">二、安装</a></li><li class="sidebar-sub-header level3"><a href="/CS/pages/b24b24/#三、新手上路" class="sidebar-link">三、新手上路</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#配置ssh免密登录" class="sidebar-link">配置ssh免密登录</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#添加管理主机" class="sidebar-link">添加管理主机</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#执行命令" class="sidebar-link">执行命令</a></li><li class="sidebar-sub-header level3"><a href="/CS/pages/b24b24/#四、inventory文件" class="sidebar-link">四、Inventory文件</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#主机与组" class="sidebar-link">主机与组</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#主机变量" class="sidebar-link">主机变量</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#组的变量" class="sidebar-link">组的变量</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#把一个组作为另一个组的子成员" class="sidebar-link">把一个组作为另一个组的子成员</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#分文件定义host和group变量" class="sidebar-link">分文件定义Host和Group变量</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#inventory参数说明" class="sidebar-link">Inventory参数说明</a></li><li class="sidebar-sub-header level3"><a href="/CS/pages/b24b24/#五、动态-inventory" class="sidebar-link">五、动态 Inventory</a></li><li class="sidebar-sub-header level3"><a href="/CS/pages/b24b24/#六、patterns" class="sidebar-link">六、Patterns</a></li><li class="sidebar-sub-header level3"><a href="/CS/pages/b24b24/#七、ad-hoc-commands" class="sidebar-link">七、Ad-Hoc Commands</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#parallelism-and-shell-commands" class="sidebar-link">Parallelism and Shell Commands</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#file-transfer" class="sidebar-link">File Transfer</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#managing-packages" class="sidebar-link">Managing Packages</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#users-and-groups" class="sidebar-link">Users and Groups</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#deploying-from-source-control" class="sidebar-link">Deploying From Source Control</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#managing-services" class="sidebar-link">Managing Services</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#time-limited-background-operations" class="sidebar-link">Time Limited Background Operations</a></li><li class="sidebar-sub-header level4"><a href="/CS/pages/b24b24/#gathering-facts" class="sidebar-link">Gathering Facts</a></li><li class="sidebar-sub-header level3"><a href="/CS/pages/b24b24/#八、ansible的配置文件" class="sidebar-link">八、Ansible的配置文件</a></li></ul></li></ul></li><li><a href="/CS/pages/05c50d/" class="sidebar-link">Ansible - Playbooks</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/CS/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/CS/info/#文档" data-v-06225672>文档</a></li><li data-v-06225672><a href="/CS/info/#Ansible" data-v-06225672>Ansible</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/RestDay" target="_blank" title="作者" class="beLink" data-v-06225672>RestDay</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2022-06-25</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">Ansible - 基础<!----></h1>  <div class="theme-vdoing-content content__default"><h2 id="ansible文档"><a href="#ansible文档" class="header-anchor">#</a> Ansible文档</h2> <p><a href="https://ansible-tran.readthedocs.io/en/latest/docs/intro.html" target="_blank" rel="noopener noreferrer">中文参考文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://docs.ansible.com/ansible/latest/user_guide/" target="_blank" rel="noopener noreferrer">官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="一、前置条件"><a href="#一、前置条件" class="header-anchor">#</a> 一、前置条件</h3> <ul><li>Python 2.6+ 已安装</li> <li>pip 已安装</li></ul> <h3 id="二、安装"><a href="#二、安装" class="header-anchor">#</a> 二、安装</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install ansible
+# or
+pip install ansible
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="三、新手上路"><a href="#三、新手上路" class="header-anchor">#</a> 三、新手上路</h3> <h4 id="配置ssh免密登录"><a href="#配置ssh免密登录" class="header-anchor">#</a> 配置ssh免密登录</h4> <ul><li>客户端：ssh-keygen；复制 /root/.ssh/id_rsa.pub 公钥</li> <li>目标端： cd /root/.ssh(没ssh目录先ssh-keygen)； cat &gt;  authorized_keys；粘贴</li></ul> <h4 id="添加管理主机"><a href="#添加管理主机" class="header-anchor">#</a> 添加管理主机</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>vim /etc/ansible/hosts
+# add 
+192.168.1.50
+# or
+192.168.1.105 ansible_ssh_user=root ansible_ssh_pass=xxx
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="执行命令"><a href="#执行命令" class="header-anchor">#</a> 执行命令</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible all -m ping
+// 响应SUCCESS ---&gt; 成功
+// 响应UNREACHABLE ---&gt; 失败，ssh免密登录没配置好
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="四、inventory文件"><a href="#四、inventory文件" class="header-anchor">#</a> 四、Inventory文件</h3> <h4 id="主机与组"><a href="#主机与组" class="header-anchor">#</a> 主机与组</h4> <p>/etc/ansible/hosts 文件的格式与windows的ini配置文件类似:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mail.example.com
+
+[webservers]
+foo.example.com
+bar.example.com
+
+[dbservers]
+one.example.com
+two.example.com
+three.example.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li>[]内是组名</li> <li>默认22端口，可自定义为ip:port</li> <li>别名：alias ansible_ssh_port=xxx ansible_ssh_host=xx.xx.xx.xx</li> <li>类型和用户名：ip ansible_connection=local/ssh  ansible_ssh_user=root</li></ul> <h4 id="主机变量"><a href="#主机变量" class="header-anchor">#</a> 主机变量</h4> <p>这些变量定义后可在 playbooks 中使用:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[atlanta]
+host1 http_port=80 maxRequestsPerChild=808
+host2 http_port=303 maxRequestsPerChild=909
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="组的变量"><a href="#组的变量" class="header-anchor">#</a> 组的变量</h4> <p>定义属于整个组的变量:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[atlanta]
+host1
+host2
+
+[atlanta:vars]
+ntp_server=ntp.atlanta.example.com
+proxy=proxy.atlanta.example.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="把一个组作为另一个组的子成员"><a href="#把一个组作为另一个组的子成员" class="header-anchor">#</a> 把一个组作为另一个组的子成员</h4> <p>可以把一个组作为另一个组的子成员,以及分配变量给整个组使用. 这些变量可以给 /usr/bin/ansible-playbook 使用,但不能给 /usr/bin/ansible 使用:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[atlanta]
+host1
+host2
+
+[raleigh]
+host2
+host3
+
+[southeast:children]
+atlanta
+raleigh
+
+[southeast:vars]
+some_server=foo.southeast.example.com
+halon_system_timeout=30
+self_destruct_countdown=60
+escape_pods=2
+
+[usa:children]
+southeast
+northeast
+southwest
+northwest
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h4 id="分文件定义host和group变量"><a href="#分文件定义host和group变量" class="header-anchor">#</a> 分文件定义Host和Group变量</h4> <p>inventory主文件采用INI格式，其它独立文件可采用YAML格式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/etc/ansible/hosts // inventory文件路径
+
+/etc/ansible/group_vars/raleigh
+/etc/ansible/group_vars/webservers
+/etc/ansible/host_vars/foosball
+foosball 主机属于raleigh、webservers两个组
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="inventory参数说明"><a href="#inventory参数说明" class="header-anchor">#</a> Inventory参数说明</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible_ssh_host
+      将要连接的远程主机名.与你想要设定的主机的别名不同的话,可通过此变量设置.
+
+ansible_ssh_port
+      ssh端口号.如果不是默认的端口号,通过此变量设置.
+
+ansible_ssh_user
+      默认的 ssh 用户名
+
+ansible_ssh_pass
+      ssh 密码(这种方式并不安全,我们强烈建议使用 --ask-pass 或 SSH 密钥)
+
+ansible_sudo_pass
+      sudo 密码(这种方式并不安全,我们强烈建议使用 --ask-sudo-pass)
+
+ansible_sudo_exe (new in version 1.8)
+      sudo 命令路径(适用于1.8及以上版本)
+
+ansible_connection
+      与主机的连接类型.比如:local, ssh 或者 paramiko. Ansible 1.2 以前默认使用 paramiko.1.2 以后默认使用 'smart','smart' 方式会根据是否支持 ControlPersist, 来判断'ssh' 方式是否可行.
+
+ansible_ssh_private_key_file
+      ssh 使用的私钥文件.适用于有多个密钥,而你不想使用 SSH 代理的情况.
+
+ansible_shell_type
+      目标系统的shell类型.默认情况下,命令的执行使用 'sh' 语法,可设置为 'csh' 或 'fish'.
+
+ansible_python_interpreter
+      目标主机的 python 路径.适用于的情况: 系统中有多个 Python, 或者命令路径不是&quot;/usr/bin/python&quot;,比如  \*BSD, 或者 /usr/bin/python
+      不是 2.X 版本的 Python.我们不使用 &quot;/usr/bin/env&quot; 机制,因为这要求远程用户的路径设置正确,且要求 &quot;python&quot; 可执行程序名不可为 python以外的名字(实际有可能名为python26).
+
+      与 ansible_python_interpreter 的工作方式相同,可设定如 ruby 或 perl 的路径....
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><p>一个主机文件的例子:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>some_host         ansible_ssh_port=2222     ansible_ssh_user=manager
+aws_host          ansible_ssh_private_key_file=/home/example/.ssh/aws.pem
+freebsd_host      ansible_python_interpreter=/usr/local/bin/python
+ruby_module_host  ansible_ruby_interpreter=/usr/bin/ruby.1.9.3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="五、动态-inventory"><a href="#五、动态-inventory" class="header-anchor">#</a> 五、动态 Inventory</h3> <p>待梳理</p> <h3 id="六、patterns"><a href="#六、patterns" class="header-anchor">#</a> 六、Patterns</h3> <p>交互命令：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible &lt;pattern_goes_here&gt; -m &lt;module_name&gt; -a &lt;arguments&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>pattern_goes_here 指定与哪些主机交互</p> <ul><li>全部</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>all
+*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>ip/系列主机名</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>one.example.com
+one.example.com:two.example.com
+192.168.1.50
+192.168.1.*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>一个或多个groups，冒号分割表示或的关系</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>webservers
+webservers:dbservers
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>排除特定组用!</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>webservers:!phoenix
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>组的交集用&amp;</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>webservers:&amp;staging
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>使用通配符*或其它</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>*.example.com
+*.com
+webservers[0]
+webservers[0-25]
+~(web|db).*\.example\.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="七、ad-hoc-commands"><a href="#七、ad-hoc-commands" class="header-anchor">#</a> 七、Ad-Hoc Commands</h3> <h4 id="parallelism-and-shell-commands"><a href="#parallelism-and-shell-commands" class="header-anchor">#</a> Parallelism and Shell Commands</h4> <p>Ansible 默认并发是5个进程，-f 设置并发数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible atlanta -a &quot;/sbin/reboot&quot; -f 10
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="file-transfer"><a href="#file-transfer" class="header-anchor">#</a> File Transfer</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code> ansible atlanta -m copy -a &quot;src=/etc/hosts dest=/tmp/hosts&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="managing-packages"><a href="#managing-packages" class="header-anchor">#</a> Managing Packages</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible webservers -m yum -a &quot;name=acme state=present&quot;
+ansible webservers -m yum -a &quot;name=acme-1.5 state=present&quot;
+ansible webservers -m yum -a &quot;name=acme state=absent&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="users-and-groups"><a href="#users-and-groups" class="header-anchor">#</a> Users and Groups</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible all -m user -a &quot;name=foo password=&lt;crypted password here&gt;&quot;
+ansible all -m user -a &quot;name=foo state=absent&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="deploying-from-source-control"><a href="#deploying-from-source-control" class="header-anchor">#</a> Deploying From Source Control</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible webservers -m git -a &quot;repo=git://foo.example.org/repo.git dest=/srv/myapp version=HEAD&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="managing-services"><a href="#managing-services" class="header-anchor">#</a> Managing Services</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible webservers -m service -a &quot;name=httpd state=started&quot;
+ansible webservers -m service -a &quot;name=httpd state=restarted&quot;
+ansible webservers -m service -a &quot;name=httpd state=stopped&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="time-limited-background-operations"><a href="#time-limited-background-operations" class="header-anchor">#</a> Time Limited Background Operations</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible all -B 3600 -P 0 -a &quot;/usr/bin/long_running_operation --do-stuff&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="gathering-facts"><a href="#gathering-facts" class="header-anchor">#</a> Gathering Facts</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>ansible all -m setup
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="八、ansible的配置文件"><a href="#八、ansible的配置文件" class="header-anchor">#</a> 八、Ansible的配置文件</h3> <p>待梳理</p></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/ResetDay/cs/edit/master/docs/03.文档/20.Ansible/01.Ansible-基础.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2022/06/26, 16:03:19</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/CS/pages/a84b72/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">index</div></a> <a href="/CS/pages/05c50d/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">Ansible - Playbooks</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/CS/pages/a84b72/" class="prev">index</a></span> <span class="next"><a href="/CS/pages/05c50d/">Ansible - Playbooks</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/CS/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/CS/pages/05c50d/"><div>
+            Ansible - Playbooks
+            <!----></div></a> <span class="date">06-26</span></dt></dl><dl><dd>02</dd> <dt><a href="/CS/pages/13e13c/"><div>
+            test
+            <!----></div></a> <span class="date">05-08</span></dt></dl><dl><dd>03</dd> <dt><a href="/CS/pages/521462/"><div>
+            test
+            <!----></div></a> <span class="date">05-08</span></dt></dl> <dl><dd></dd> <dt><a href="/CS/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2022-2022
+    <span>RestDay</span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/CS/assets/js/app.c7927c47.js" defer></script><script src="/CS/assets/js/2.3fc7a956.js" defer></script><script src="/CS/assets/js/11.bda75eb1.js" defer></script>
+  </body>
+</html>
